@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  static const Color mainColor = Color(0xFF7C7DED);//Replace the color #7c7ded that we used multiple times with a variable that stores that color.
 
   @override
   Widget build(BuildContext context) {
@@ -35,24 +36,25 @@ class HomeScreen extends StatelessWidget {
               child: const Text(
                 "Grade Calculator",
                 style: TextStyle(
-                  color: Color(0xFF7C7DED),
+                  color: mainColor,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             const SizedBox(height: 50),
-
+            //Border
             Container(
               padding: const EdgeInsets.all(30),
               margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
-                border: Border.all(color: const Color(0xFF7C7DED), width: 1.5),
+                border: Border.all(color:mainColor, width: 1.5),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // row for the sbj and grade
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -119,6 +121,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 5),
+                  // column for the ....
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -151,6 +154,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // button it is the the same as ali side
             const SizedBox(height: 50),
             Container(
               width: 150,
@@ -158,7 +162,7 @@ class HomeScreen extends StatelessWidget {
               margin: const EdgeInsets.all(20),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: const Color(0xFF7C7DED),
+                color: const Color(0xFF7C7DED),//how hex colors in flutter like this...
                 borderRadius: BorderRadius.circular(50),
               ),
               child: const Text(
