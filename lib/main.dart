@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  // Define the color as a constant variable
-  static const Color mainColor = Color(0xFF7C7DED);
+ 
+  static const Color mainColor = Color(0xFF7C7DED);//Replace the color #7c7ded that we used multiple times with a variable that stores that color.
 
   @override
   Widget build(BuildContext context) {
@@ -51,12 +51,14 @@ class HomeScreen extends StatelessWidget {
                 border: Border.all(color: const Color(0xFF7C7DED), width: 1.5),
                 borderRadius: BorderRadius.circular(20),
               ),
+
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      //rows for the sbj and grade
                       Text(
                         "Math:",
                         style: TextStyle(
@@ -152,7 +154,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            
+            //button like ali do it in the thu class
             const SizedBox(height: 50),
             Container(
               width: 150,
@@ -160,7 +162,7 @@ class HomeScreen extends StatelessWidget {
               margin: const EdgeInsets.all(20),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: const Color(0xFF7C7DED),
+                color: const Color(0xFF7C7DED),///how hex colors in flutter.Like this...
                 borderRadius: BorderRadius.circular(50),
               ),
               child: const Text(
