@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  // Define the color as a constant variable
+  static const Color mainColor = Color(0xFF7C7DED);
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +37,13 @@ class HomeScreen extends StatelessWidget {
               child: const Text(
                 "Grade Calculator",
                 style: TextStyle(
-                  color: Color(0xFF7C7DED),
+                  color: mainColor,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             const SizedBox(height: 50),
-
             Container(
               padding: const EdgeInsets.all(30),
               margin: const EdgeInsets.symmetric(horizontal: 20),
@@ -151,6 +152,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            
             const SizedBox(height: 50),
             Container(
               width: 150,
